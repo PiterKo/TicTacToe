@@ -1,0 +1,15 @@
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/bin/Debug/net7.0/TicTacToe
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/bin/Debug/net7.0/TicTacToe.deps.json
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/bin/Debug/net7.0/TicTacToe.runtimeconfig.json
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/bin/Debug/net7.0/TicTacToe.dll
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/bin/Debug/net7.0/TicTacToe.pdb
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.csproj.AssemblyReference.cache
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.AssemblyInfoInputs.cache
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.AssemblyInfo.cs
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.csproj.CoreCompileInputs.cache
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.dll
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/refint/TicTacToe.dll
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.pdb
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/TicTacToe.genruntimeconfig.cache
+/Users/piotrkolodziejek/Projekty/TicTac/TicTacToe/obj/Debug/net7.0/ref/TicTacToe.dll
