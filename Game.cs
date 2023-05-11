@@ -25,7 +25,28 @@ namespace TicTacToe
 
         //pierwszy ruch w lvl
         FirstMove:
-            var response = move.Run($"Enter first move {playerOneName} column,row : ", playerOne);
+
+            DoMove(move, playerOneName, playerOne, lvl, startArray);
+
+        //drugi ruch w lvl
+        SecondMove:
+
+            DoMove(move, playerTwoName, playerTwo, lvl, startArray);
+
+            //Dodaje kolejny lvl i warca do początku
+            lvl++;
+            goto Start;
+
+            //end of program
+            endGame.End();
+        }
+
+        private void DoMove(Move move, string playerName, char playerChar, int lvl, char[,] startArray)
+        {
+        FirstMove:
+            var response = move.Run($"Enter first move {playerName} column,row : ", playerChar);
+
+            var endGame = new EndGame();
 
             //Kontrolka czy pole jest juz zajęte
             if (!response)
@@ -35,46 +56,16 @@ namespace TicTacToe
 
             //kontrolka sprawdza wygraną
             if (Canvas.CheckWin() && lvl > 2)
-                endGame.Win(playerOneName);
+                endGame.Win(playerName);
 
             //Kontrolka sprawdza czy tablica nie została w całości wypełniona znakami
             if (Canvas.IsEnd())
             {
-                goto End;
+                return;
             }
 
             //Fuckcja pokazuje aktualną tablice / canvas
             ShowCanvas.Execute(startArray);
-
-        //drugi ruch w lvl
-        SecondMove:
-            response = move.Run($"Enter second move {playerTwoName} column,row : ", playerTwo);
-
-            //Kontrolka czy pole jest juz zajęte
-            if (!response)
-            {
-                goto SecondMove;
-            }
-
-            //kontrolka sprawdza wygraną
-            if (Canvas.CheckWin() && lvl > 2)
-                endGame.Win(playerTwoName);
-
-            //Kontrolka sprawdza czy tablica nie została w całości wypełniona znakami
-            if (Canvas.IsEnd())
-            {
-                goto End;
-            }
-
-            ShowCanvas.Execute(startArray);
-
-            //Dodaje kolejny lvl i warca do początku
-            lvl++;
-            goto Start;
-
-        End:
-            //end of program
-            endGame.End();
         }
     }
 }
