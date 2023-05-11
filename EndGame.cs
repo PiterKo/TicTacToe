@@ -7,6 +7,9 @@ namespace TicTacToe
 {
     public class EndGame
     {
+        /// <summary>
+        /// Konie gry
+        /// </summary>
         public void End()
         {
             var array = Canvas.StartCanvas;
@@ -16,6 +19,10 @@ namespace TicTacToe
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// koniec gry wygrana!
+        /// </summary>
+        /// <param name="name"></param>
         public void Win(string name = "Piotr")
         {
             var array = Canvas.StartCanvas;

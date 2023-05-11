@@ -13,8 +13,18 @@ namespace TicTacToe
             int column = int.Parse(Console.ReadLine());
             int row = int.Parse(Console.ReadLine());
 
+            var valid = Validation(column, row);
+
+            //kontrolka sprawdza czy input gracza miesci sie w przedziale kolumn i wierszy
+            if (!valid)
+            {
+                Console.WriteLine("Zła wartość!!!");
+                return false;
+            }
+
             var isAvalible = Canvas.IsAvalible(column, row);
 
+            //sprawdzenie czy ruch jest dostepny 
             if (isAvalible)
             {
                 Canvas.InsertChar(character, column, row);
@@ -26,6 +36,15 @@ namespace TicTacToe
                 return false;
             }
 
+        }
+
+        //validacja przed podaniem złej wartosci row, column
+        private bool Validation(int column, int row)
+        {
+            if (column > 3 || row > 3)
+                return false;
+
+            return true;
         }
 
     }

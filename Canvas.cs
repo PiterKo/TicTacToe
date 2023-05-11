@@ -38,6 +38,7 @@ namespace TicTacToe
             StartCanvas[row, column] = character;
         }
 
+        //funkcja sprawdz czy pole nie jest juz zajete
         public static bool IsAvalible(int column, int row)
         {
             var character = StartCanvas[row, column];
@@ -52,6 +53,7 @@ namespace TicTacToe
             }
         }
 
+        //funkcja sprawdza czy tablica jest juz zapełniona
         public static bool IsEnd()
         {
             foreach (var item in StartCanvas)
@@ -63,25 +65,6 @@ namespace TicTacToe
 
             return true;
         }
-
-        // public static void Show()
-        // {
-        //     for (var i = 0; i < 3; i++)
-        //     {
-        //         Console.WriteLine(new string(GetCharactersFromRow(i)));
-        //     }
-
-        //     Console.WriteLine("Separator");
-
-        //     for (var i = 0; i < 3; i++)
-        //     {
-        //         Console.WriteLine(new string(GetCharactersFromColumn(i)));
-        //     }
-
-        //     Console.WriteLine(new string(GetCharactersFromCross()));
-        //     Console.WriteLine(new string(GetCharactersFromCross(true)));
-
-        // }
 
         public static bool CheckWin()
         {
@@ -160,7 +143,11 @@ namespace TicTacToe
             return characters;
         }
 
-        //pobiera znaki z skosów => default skos lewy, podajac parametr true skos prawy
+        /// <summary>
+        /// pobiera znaki z skosów => default skos lewy, podajac parametr true skos prawy
+        /// </summary>
+        /// <param name="rightCross">Prawy skos</param>
+        /// <returns></returns>
         private static char[] GetCharactersFromCross(bool rightCross = false)
         {
             var characters = new char[3];

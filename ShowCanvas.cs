@@ -7,6 +7,12 @@ namespace TicTacToe
 {
     public static class ShowCanvas
     {
+        /// <summary>
+        /// funkcja wyświetla podana w parametrze tablice
+        /// </summary>
+        /// <param name="startArray"></param>
+        /// <param name="columns"></param>
+        /// <param name="rows"></param>
         public static void Execute(char[,] startArray, int columns = 3, int rows = 3)
         {
             Console.WriteLine();
