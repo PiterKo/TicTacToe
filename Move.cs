@@ -54,6 +54,5 @@ namespace TicTacToe
 
             return true;
         }
-
     }
 }
