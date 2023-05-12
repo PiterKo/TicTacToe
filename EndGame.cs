@@ -29,7 +29,9 @@ namespace TicTacToe
 
             ShowCanvas.Execute(array);
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Gratulacje {name}! Wygrana!");
+            Console.ResetColor();
             Console.WriteLine("Koniec gry!");
             Console.ReadKey();
         }

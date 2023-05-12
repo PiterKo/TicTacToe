@@ -15,6 +15,13 @@ namespace TicTacToe
 
             var endGame = new EndGame();
 
+            //jesli pobrane pierwsze litery imion graczy są takie same, wówczss podstawia x i o
+            if (playerOne == playerTwo)
+            {
+                playerOne = 'x';
+                playerTwo = 'o';
+            }
+
 
             ShowCanvas.Execute(startArray, columns, rows);
 
@@ -31,7 +38,7 @@ namespace TicTacToe
         //drugi ruch w lvl
         SecondMove:
 
-            DoMove(move, playerTwoName, playerTwo, lvl, startArray);
+            DoMove(move, playerTwoName, playerTwo, lvl, startArray, true);
 
             //Dodaje kolejny lvl i warca do początku
             lvl++;
@@ -41,10 +48,13 @@ namespace TicTacToe
             endGame.End();
         }
 
-        private void DoMove(Move move, string playerName, char playerChar, int lvl, char[,] startArray)
+        private void DoMove(Move move, string playerName, char playerChar, int lvl, char[,] startArray, bool odd = false)
         {
         FirstMove:
-            var response = move.Run($"Enter first move {playerName} column,row : ", playerChar);
+
+            var moveCount = odd ? "second" : "first";
+
+            var response = move.Run($"Enter {moveCount} move {playerName} column,row : ", playerChar, odd);
 
             var endGame = new EndGame();
 

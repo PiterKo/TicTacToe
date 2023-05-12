@@ -7,8 +7,16 @@ namespace TicTacToe
 {
     public class Move
     {
-        public bool Run(string text, char character)
+        public bool Run(string text, char character, bool odd = false)
         {
+            if (odd)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            else
+            {
+                Console.ResetColor();
+            }
             Console.WriteLine(text);
             int column = int.Parse(Console.ReadLine());
             int row = int.Parse(Console.ReadLine());
